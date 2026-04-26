@@ -3,15 +3,15 @@ title: "Reporte de Reproducibilidad"
 subtitle: "Artículo: [título del artículo a reproducir]
  <br><a href='https://github.com/data-soc/template-repro' target='_blank' ><i class='bi bi-github'></i></a>" # reemplazar con dirección al repositorio del proyecto
 author:
-  - name: Autor 1
+  - name: Violeta Mansilla
     email: mail@mail.com 
     affiliations:
       - ref: 1
-  - name: Autor 2
+  - name: Francisca Osorio
     email: mail@mail.com 
     affiliations:
       - ref: 1
-  - name: Autor 3
+  - name: Martina Soto
     email: mail@mail.com 
     affiliations:
       - ref: 1 
