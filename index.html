@@ -126,7 +126,7 @@ div.csl-indent {
     </div>
     <div class="quarto-title-meta-contents">
           <p class="affiliation">
-              Departamento de Sociología, Universidad de Chile
+              Estudiantes de Sociología, Universidad de Chile
             </p>
         </div>
       <div class="quarto-title-meta-contents">
@@ -134,7 +134,7 @@ div.csl-indent {
     </div>
     <div class="quarto-title-meta-contents">
           <p class="affiliation">
-              Departamento de Sociología, Universidad de Chile
+              Estudiantes de Sociología, Universidad de Chile
             </p>
         </div>
       <div class="quarto-title-meta-contents">
@@ -142,7 +142,7 @@ div.csl-indent {
     </div>
     <div class="quarto-title-meta-contents">
           <p class="affiliation">
-              Departamento de Sociología, Universidad de Chile
+              Estudiantes de Sociología, Universidad de Chile
             </p>
         </div>
     </div>
@@ -153,7 +153,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">3 de mayo de 2026</p>
+        <p class="date">4 de mayo de 2026</p>
       </div>
     </div>
     
@@ -235,7 +235,8 @@ div.csl-indent {
 <section id="procesamiento" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="procesamiento"><span class="header-section-number">3.2.1</span> Procesamiento</h3>
 <p>En esta etapa, preparamos la base de datos para el análisis. Utilizamos librerías como <code>tidyverse</code> para mayor orden, <code>lubridate</code> para ordenar las fechas, y <code>survival</code> para los cálculos de tiempo.</p>
-<p><strong>1. Carga y limpieza de datos temporales</strong> Primero, cargamos la base de datos. Para asegurar la consistencia del análisis, realizamos pruebas con dos versiones del archivo: la versión original del repositorio (Chilean_cabinets_1990_2014_v1.csv) y la versión más reciente (Chilean_cabinets_1990_2014.csv). En ambos casos los resultados fueron idénticos, por lo que se decidió utilizar la versión v1 para este reporte. Luego, transformamos las fechas de inicio y fin de cada ministro para calcular cuántos días exactos estuvieron en el cargo (<code>time</code>). A los datos con tiempos negativos o vacíos, decidimos asignarles “1 día” para no perder esos datos en caso que se ejecute el mismo código con una base de datos distinta y que pueda tener errores. Además, marcamos la variable <code>event = 1</code> para indicar que el ministro finalizó su periodo.</p>
+<p><strong>1. Carga y limpieza de datos temporales</strong>:</p>
+<p>Primero, cargamos la base de datos. Para asegurar la consistencia del análisis, realizamos pruebas con dos versiones del archivo: la versión original del repositorio (Chilean_cabinets_1990_2014_v1.csv) y la versión más reciente (Chilean_cabinets_1990_2014.csv). En ambos casos los resultados fueron idénticos, por lo que se decidió utilizar la versión v1 para este reporte. Luego, transformamos las fechas de inicio y fin de cada ministro para calcular cuántos días exactos estuvieron en el cargo (<code>time</code>). A los datos con tiempos negativos o vacíos, decidimos asignarles “1 día” para no perder esos datos en caso que se ejecute el mismo código con una base de datos distinta y que pueda tener errores. Además, marcamos la variable <code>event = 1</code> para indicar que el ministro finalizó su periodo.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -264,7 +265,8 @@ div.csl-indent {
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p><strong>2. Filtrado por presidente</strong> Para que nuestra tabla quede en el mismo formato que la tabla del artículo, filtramos la base de datos para separar a los ministros según el gobierno en el que participaron (Aylwin, Frei, Lagos y Bachelet) y luego creamos un grupo de datos para la concertación completa.</p>
+<p><strong>2. Filtrado por presidente</strong>:</p>
+<p>Para que nuestra tabla quede en el mismo formato que la tabla del artículo, filtramos la base de datos para separar a los ministros según el gobierno en el que participaron (Aylwin, Frei, Lagos y Bachelet) y luego creamos un grupo de datos para la concertación completa.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>

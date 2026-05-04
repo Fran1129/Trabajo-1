@@ -17,7 +17,7 @@ author:
       - ref: 1 
 affiliations: 
   - id: 1
-    name: Departamento de Sociología, Universidad de Chile
+    name: Estudiantes de Sociología, Universidad de Chile
 date: today
 lang: "es"
 fontsize: 13pt
@@ -124,7 +124,8 @@ Para el ejercicio de reproducibilidad de la Tabla 3, se creó un nuevo Script en
 
 En esta etapa, preparamos la base de datos para el análisis. Utilizamos librerías como `tidyverse` para mayor orden, `lubridate` para ordenar las fechas, y `survival` para los cálculos de tiempo.
 
-**1. Carga y limpieza de datos temporales** 
+**1. Carga y limpieza de datos temporales**:
+
 Primero, cargamos la base de datos. Para asegurar la consistencia del análisis, realizamos pruebas con dos versiones del archivo: la versión original del repositorio (Chilean_cabinets_1990_2014_v1.csv) y la versión más reciente (Chilean_cabinets_1990_2014.csv). En ambos casos los resultados fueron idénticos, por lo que se decidió utilizar la versión v1 para este reporte. Luego, transformamos las fechas de inicio y fin de cada ministro para calcular cuántos días exactos estuvieron en el cargo (`time`). A los datos con tiempos negativos o vacíos, decidimos asignarles "1 día" para no perder esos datos en caso que se ejecute el mismo código con una base de datos distinta y que pueda tener errores. Además, marcamos la variable `event = 1` para indicar que el ministro finalizó su periodo.
 
 ```{r procesamiento-limpieza, message=FALSE, warning=FALSE}
@@ -153,7 +154,8 @@ data_CHL <- data_CHL %>%
   )
 ```
 
-**2. Filtrado por presidente**
+**2. Filtrado por presidente**:
+
 Para que nuestra tabla quede en el mismo formato que la tabla del artículo, filtramos la base de datos para separar a los ministros según el gobierno en el que participaron (Aylwin, Frei, Lagos y Bachelet) y luego creamos un grupo de datos para la concertación completa.
 
 ```{r procesamiento-filtrado, message=FALSE, warning=FALSE}
@@ -236,7 +238,6 @@ popViewport()
 Basándose en el análisis realizado, es posible concluir que el artículo presenta un nivel de reproducibilidad insuficiente. Si bien el estudio es transparente al contar con un repositorio abierto en GitHub, la simple disponibilidad de los archivos demuestra que el libre acceso a datos y códigos no garantiza la reproducibilidad de la información.
 
 El obstáculo principal radicó en la ausencia de un protocolo de reproducibilidad estructurado (por ejemplo, el uso de carpetas como Input, Processing, Output), y por otro lado, el hecho de que el código proporcionado por los autores correspondía únicamente a un análisis exploratorio de los datos y carecía de los datos necesarios para generar la Tabla 3. Por otro lado, la metodología carecia de explicaciones sobre las decisiones implementadas durante el procesamiento, lo que dificultó el ejercicio de reproducibilidad de los resultados para el presente trabajo. 
-
 
 
 # Recomendaciones
