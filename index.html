@@ -113,7 +113,7 @@ div.csl-indent {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Reporte de Reproducibilidad</h1>
-            <p class="subtitle lead">Artículo: [Cambios de gabinete y supervivencia de los ministros en Chile durante los gobiernos de la Concertación (1990-2010)] <br><a href="https://github.com/data-soc/template-repro" target="_blank"><i class="bi bi-github"></i></a></p>
+            <p class="subtitle lead">Artículo: [Cambios de gabinete y supervivencia de los ministros en Chile durante los gobiernos de la Concertación (1990-2010)] <br><a href="https://github.com/Fran1129/Trabajo-1" target="_blank"><i class="bi bi-github"></i></a></p>
                       </div>
   </div>
     
@@ -208,7 +208,7 @@ div.csl-indent {
 <p>El artículo seleccionado entrega información importante acerca de la transparencia de la investigación. En primer lugar, es posible destacar que se presenta un resumen detallado de las labores de los investigadores a cargo, lo que entrega transparencia sobre posibles sesgos por los que el estudio podría ser influenciado. En ese sentido, ambos investigadores se desempeñan como docentes en distintas casas de estudios, descartando su pertenencia a organizaciones por las cuales se genere algún tipo de conflicto de interés, ya sea por temas ideológicos, de restricciones, etc. (como por ejemplo con la pertenencia a algún partido político).</p>
 <p>En segundo lugar, se especifica que esta investigación se enmarca en el contexto del VIII Congreso Latinoamericano de Ciencia Política organizado por la Asociación Latinoamericana de Ciencia Política (ALACIP). En paralelo, se aclara que el financiamiento de esta investigación proviene del proyecto Fondecyt #1140564 (Sergio Toro, investigador principal).</p>
 <p>En tercer lugar, el artículo señala los detalles pertinentes a la transparencia de los datos, especificando temas como los métodos utilizados, las variables consideradas, así como temas referentes a la precisión y el origen de los datos.</p>
-<p>En base a lo anterior es posible señalar que el artículo cuenta con grandes consideraciones en términos de transparencia, contando incluso con un repositorio externo en GitHub, el cual entrega información acerca de los códigos y métodos utilizados, y detalla a su vez, algunos cambios realizados en el artículo a partir de sugerencias de evaluadores anónimos.</p>
+<p>En base a lo anterior es posible señalar que el artículo cuenta con varias consideraciones en términos de transparencia, contando incluso con un repositorio externo en GitHub, el cual entrega información acerca de los códigos y métodos utilizados, y detalla a su vez, algunos cambios realizados en el artículo a partir de sugerencias de evaluadores anónimos. Sin embargo, la existencia de tal información no asegura que esta sea completa ni detallada, solo asegura que es de acceso público, por lo que el artículo no puede ser catalogado como completamente transparente, ya que si omite cierta información metodológica que es detallada más adelante.</p>
 </section>
 <section id="análisis-reproducible" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Análisis reproducible</h1>
@@ -220,26 +220,22 @@ div.csl-indent {
 <p>En base a lo anterior, es posible dar cuenta de que pese a que el autor del artículo cuenta con un repositorio de GitHub en donde se presenta un código disponible, esto no posibilita un correcto ejercicio de la reproducibilidad de la información.</p>
 <section id="resultado-a-reproducir" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="resultado-a-reproducir"><span class="header-section-number">3.1</span> Resultado a reproducir</h2>
-<ul>
-<li>A continuación se presenta la tabla seleccionada para el ejercicio de reproducibilidad:</li>
-</ul>
+<p>A continuación se presenta la tabla seleccionada para el ejercicio de reproducibilidad:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="input/images/tabla_original.png" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Tabla 3 original: Estadísticas de supervivencia reportadas en el artículo de González-Bustamante y Olivares (2016).</figcaption>
 </figure>
 </div>
-<ul>
-<li>La tabla seleccionada da cuenta de las estadisticas de supervivencia de los ministros en cada gobierno de la Concertación, entregando información acerca de los días en riesgo, la tasa de incidencia y la tasa de supervivencia de los ministros.</li>
-</ul>
+<p>La tabla seleccionada da cuenta de las estadisticas de supervivencia de los ministros en cada gobierno de la Concertación, entregando información acerca de los días en riesgo, la tasa de incidencia y la tasa de supervivencia de los ministros.</p>
 </section>
 <section id="proceso-de-reproducción" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="proceso-de-reproducción"><span class="header-section-number">3.2</span> Proceso de reproducción</h2>
-<p>Para lograr reproducir la Tabla 3, tuvimos que crear nuestro propio código desde cero, ya que el script del autor original solo contenía los gráficos exploratorios y no los cálculos finales. A continuación, detallamos los pasos, herramientas y ajustes que realizamos.</p>
+<p>Para el ejercicio de reproducibilidad de la Tabla 3, se creó un nuevo Script en R con códigos desde cero, ya que el Script del autor solo contenía los gráficos exploratorios y no los gráficos finales, utilizados en el artículo. En el siguiente apartado, se detallan los pasos, herramientas y ajustes realizados.</p>
 <section id="procesamiento" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="procesamiento"><span class="header-section-number">3.2.1</span> Procesamiento</h3>
-<p>En esta etapa, preparamos la base de datos para el análisis. Utilizamos librerías como <code>tidyverse</code> para ordenar la información, <code>lubridate</code> para manejar las fechas correctamente, y <code>survival</code> para los cálculos de tiempo.</p>
-<p><strong>1. Carga y limpieza de datos temporales</strong> Primero, cargamos la base de datos. Para asegurar la consistencia del análisis, realizamos pruebas con dos versiones del archivo: la versión original del repositorio (Chilean_cabinets_1990_2014_v1.csv) y la versión más reciente (Chilean_cabinets_1990_2014.csv). En ambos casos los resultados fueron idénticos, por lo que procedimos con la versión v1 para este reporte. Luego, transformamos las fechas de inicio y fin de cada ministro para calcular cuántos días exactos estuvieron en el cargo (<code>time</code>). A los datos con tiempos negativos o vacíos, decidimos asignarles “1 día” para no perder esos datos en caso que se ejecute el mismo código con una base de datos distinta y que pueda tener errores. Además, marcamos la variable <code>event = 1</code> para indicar que el ministro finalizó su periodo.</p>
+<p>En esta etapa, preparamos la base de datos para el análisis. Utilizamos librerías como <code>tidyverse</code> para mayor orden, <code>lubridate</code> para ordenar las fechas, y <code>survival</code> para los cálculos de tiempo.</p>
+<p><strong>1. Carga y limpieza de datos temporales</strong> Primero, cargamos la base de datos. Para asegurar la consistencia del análisis, realizamos pruebas con dos versiones del archivo: la versión original del repositorio (Chilean_cabinets_1990_2014_v1.csv) y la versión más reciente (Chilean_cabinets_1990_2014.csv). En ambos casos los resultados fueron idénticos, por lo que se decidió utilizar la versión v1 para este reporte. Luego, transformamos las fechas de inicio y fin de cada ministro para calcular cuántos días exactos estuvieron en el cargo (<code>time</code>). A los datos con tiempos negativos o vacíos, decidimos asignarles “1 día” para no perder esos datos en caso que se ejecute el mismo código con una base de datos distinta y que pueda tener errores. Además, marcamos la variable <code>event = 1</code> para indicar que el ministro finalizó su periodo.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -268,7 +264,7 @@ div.csl-indent {
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p><strong>2. Filtrado por presidente</strong> Para que nuestra tabla quede igual a la del artículo, filtramos la base de datos para separar a los ministros según el gobierno en el que participaron (Aylwin, Frei, Lagos y Bachelet) y luego creamos un grupo unificado para la concertación completa.</p>
+<p><strong>2. Filtrado por presidente</strong> Para que nuestra tabla quede en el mismo formato que la tabla del artículo, filtramos la base de datos para separar a los ministros según el gobierno en el que participaron (Aylwin, Frei, Lagos y Bachelet) y luego creamos un grupo de datos para la concertación completa.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -289,7 +285,7 @@ div.csl-indent {
 </section>
 <section id="reproducción" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="reproducción"><span class="header-section-number">3.2.2</span> Reproducción</h3>
-<p>Una vez los datos fueron cargados y filtrados, creamos una función para calcular los valores estadísticos que pide la Tabla 3 original: la suma total de “días en riesgo”, la “tasa de incidencia”, y los cuartiles de supervivencia (25%, 50% y 75%). Finalmente, se arregla la tabla y exportamos el resultado como imagen en formato PNG.</p>
+<p>Una vez los datos fueron cargados y filtrados, se creó una función para calcular los valores estadísticos que pide la Tabla 3 original: la suma total de “días en riesgo”, la “tasa de incidencia”, y los cuartiles de supervivencia (25%, 50% y 75%). Finalmente, se arregla la tabla y se exporta el resultado al formato PNG.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -353,13 +349,13 @@ div.csl-indent {
 </section>
 <section id="conclusiones" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Conclusiones</h1>
-<p>Basándose en el análisis realizado, concluimos que el artículo presenta un nivel de reproducibilidad intermedio-bajo. Si bien el estudio es transparente al contar con un repositorio abierto en GitHub, la simple disponibilidad de los archivos demuestra que el libre acceso a datos y códigos no garantiza la reproducibilidad de una investigación.</p>
-<p>El obstáculo principal radicó en la ausencia de un protocolo de reproducibilidad estructurado (por ejemplo, el uso de directorios estandarizados como Input, Processing, Output). El código proporcionado por los autores correspondía únicamente a un Análisis Exploratorio de Datos (EDA) y carecía de las rutinas estadísticas necesarias para generar la Tabla 3, así como de explicaciones sobre las decisiones metodológicas tomadas durante el procesamiento. Esto nos obligó a deducir y reconstruir la lógica de limpieza desde cero.</p>
-<p>Esto evidencia que, el que la base de datos sea de libre acceso y que el repositorio proporcione un código completo, no asegura que se puedan reproducir las tablas y gráficos presentados en el artículo, lo que dificulta la replicación o reproducción del análisis utilizando otras fuentes.</p>
+<p>Basándose en el análisis realizado, es posible concluir que el artículo presenta un nivel de reproducibilidad insuficiente. Si bien el estudio es transparente al contar con un repositorio abierto en GitHub, la simple disponibilidad de los archivos demuestra que el libre acceso a datos y códigos no garantiza la reproducibilidad de la información.</p>
+<p>El obstáculo principal radicó en la ausencia de un protocolo de reproducibilidad estructurado (por ejemplo, el uso de carpetas como Input, Processing, Output), y por otro lado, el hecho de que el código proporcionado por los autores correspondía únicamente a un análisis exploratorio de los datos y carecía de los datos necesarios para generar la Tabla 3. Por otro lado, la metodología carecia de explicaciones sobre las decisiones implementadas durante el procesamiento, lo que dificultó el ejercicio de reproducibilidad de los resultados para el presente trabajo.</p>
 </section>
 <section id="recomendaciones" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Recomendaciones</h1>
-<p>Recomendaciones para mejorar la reproducibilidad del artículo, si es necesario.</p>
+<p>Dentro de las recomendaciones para mejorar la reproducibilidad del artículo, es posible señalar la necesidad de que el repositorio del autor efectivamente de cuenta de todas las actualizaciones realizadas, tanto en el artículo, como en los datos y el código, brindando acceso a la base de dato utilizada originalmente.</p>
+<p>Por otro lado, se recomienda que el código del repositorio sea completo, es decir, que incluya no solo un análisis exploratorio de los datos, sino que incluya a su vez todos los códigos utilizados para generar las tablas y gráficos del artículo, ya que la información disponible no es suficiente para posibilitar la reproducibilidad de los datos. En ese sentido, para asegurar dicha reproducibilidad, es necesario que el código incluya todos los datos y procedimientos ejecutados por los autores.</p>
 </section>
 <section id="referencias" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Referencias</h1>
