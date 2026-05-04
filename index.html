@@ -26,10 +26,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -140,11 +176,9 @@ div.csl-indent {
   </ul></li>
   <li><a href="#conclusiones" id="toc-conclusiones" class="nav-link" data-scroll-target="#conclusiones"><span class="header-section-number">4</span> Conclusiones</a></li>
   <li><a href="#recomendaciones" id="toc-recomendaciones" class="nav-link" data-scroll-target="#recomendaciones"><span class="header-section-number">5</span> Recomendaciones</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">6</span> Referencias</a></li>
-  <li><a href="#apéndice" id="toc-apéndice" class="nav-link" data-scroll-target="#apéndice"><span class="header-section-number">7</span> Apéndice</a>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">6</span> Referencias</a>
   <ul class="collapse">
-  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">7.1</span> Material suplementario</a></li>
-  <li><a href="#código" id="toc-código" class="nav-link" data-scroll-target="#código"><span class="header-section-number">7.2</span> Código</a></li>
+  <li><a href="#código" id="toc-código" class="nav-link" data-scroll-target="#código"><span class="header-section-number">6.1</span> Código</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -163,15 +197,15 @@ div.csl-indent {
 </section>
 <section id="evaluación-de-reproducibilidad" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Evaluación de reproducibilidad</h1>
-<ul>
-<li><strong>Disponibilidad de datos</strong>: Sí, el artículo entrega acceso a los datos utilizados en el estudio mediante un repositorio en GitHub, en este se encuentra la base de datos utilizada en la investigación, los códigos, imágenes de gráficos resultantes del análisis, referencias, entre otros documentos.</li>
-<li><strong>Disponibilidad de código</strong>: El artículo entrega un repositorio de GitHub con los códigos utilizados en R; sin embargo, las tablas y gráficos presentados en el informe no corresponden con las que se realizan mediante los códigos, ya que estos fueron siendo actualizados pero estos cambios no fueron reportados explícitamente en el código.</li>
-<li><strong>Documentación</strong>: El artículo menciona que se aplicó un análisis de supervivencia, específicamente modelos de riesgos proporcionales y regresiones de Cox con fragilidad compartida. Además, se señala que el conjunto de datos utilizados se construyó con fuentes de acceso público, se describe la operacionalización de variables como características individuales o variables institucionales.</li>
-</ul>
+<p><strong>Disponibilidad de datos</strong>:</p>
+<p>Sí, el artículo entrega acceso a los datos utilizados en el estudio mediante un repositorio en GitHub, en este se encuentra la base de datos utilizada en la investigación, los códigos, imágenes de gráficos resultantes del análisis, referencias, entre otros documentos.</p>
+<p><strong>Disponibilidad de código</strong>:</p>
+<p>El artículo entrega un repositorio de GitHub con los códigos utilizados en R; sin embargo, las tablas y gráficos presentados en el informe no corresponden con las que se realizan mediante los códigos, ya que estos fueron siendo actualizados pero estos cambios no fueron reportados explícitamente en el código.</p>
+<p><strong>Documentación</strong>:</p>
+<p>El artículo menciona que se aplicó un análisis de supervivencia, específicamente modelos de riesgos proporcionales y regresiones de Cox con fragilidad compartida. Además, se señala que el conjunto de datos utilizados se construyó con fuentes de acceso público, se describe la operacionalización de variables como características individuales o variables institucionales.</p>
 <p>De este modo, el artículo presenta una metodología relativamente clara debido a que explica las técnicas utilizadas así como la construcción de datos. Sin embargo, si bien el informe es claro para su comprensión, su réplica no sería directa ya que los datos provienen de fuentes distintas y deben ser reconstruidos por el investigador interesado.</p>
-<ul>
-<li><strong>Transparencia</strong>: El artículo seleccionado entrega información importante acerca de la transparencia de la investigación. En primer lugar, es posible destacar que se presenta un resumen detallado de las labores de los investigadores a cargo, lo que entrega transparencia sobre posibles sesgos por los que el estudio podría ser influenciado. En ese sentido, ambos investigadores se desempeñan como docentes en distintas casas de estudios, descartando su pertenencia a organizaciones por las cuales se genere algún tipo de conflicto de interés, ya sea por temas ideológicos, de restricciones, etc. (como por ejemplo con la pertenencia a algún partido político).</li>
-</ul>
+<p><strong>Transparencia</strong>:</p>
+<p>El artículo seleccionado entrega información importante acerca de la transparencia de la investigación. En primer lugar, es posible destacar que se presenta un resumen detallado de las labores de los investigadores a cargo, lo que entrega transparencia sobre posibles sesgos por los que el estudio podría ser influenciado. En ese sentido, ambos investigadores se desempeñan como docentes en distintas casas de estudios, descartando su pertenencia a organizaciones por las cuales se genere algún tipo de conflicto de interés, ya sea por temas ideológicos, de restricciones, etc. (como por ejemplo con la pertenencia a algún partido político).</p>
 <p>En segundo lugar, se especifica que esta investigación se enmarca en el contexto del VIII Congreso Latinoamericano de Ciencia Política organizado por la Asociación Latinoamericana de Ciencia Política (ALACIP). En paralelo, se aclara que el financiamiento de esta investigación proviene del proyecto Fondecyt #1140564 (Sergio Toro, investigador principal).</p>
 <p>En tercer lugar, el artículo señala los detalles pertinentes a la transparencia de los datos, especificando temas como los métodos utilizados, las variables consideradas, así como temas referentes a la precisión y el origen de los datos.</p>
 <p>En base a lo anterior es posible señalar que el artículo cuenta con grandes consideraciones en términos de transparencia, contando incluso con un repositorio externo en GitHub, el cual entrega información acerca de los códigos y métodos utilizados, y detalla a su vez, algunos cambios realizados en el artículo a partir de sugerencias de evaluadores anónimos.</p>
@@ -201,27 +235,127 @@ div.csl-indent {
 </section>
 <section id="proceso-de-reproducción" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="proceso-de-reproducción"><span class="header-section-number">3.2</span> Proceso de reproducción</h2>
-<ul>
-<li>Descripción detallada del proceso seguido para reproducir el resultado seleccionado, incluyendo los pasos realizados, las herramientas utilizadas, y cualquier ajuste necesario para lograr la reproducción. Incluye las siguientes sub secciones:</li>
-</ul>
+<p>Para lograr reproducir la Tabla 3, tuvimos que crear nuestro propio código desde cero, ya que el script del autor original solo contenía los gráficos exploratorios y no los cálculos finales. A continuación, detallamos los pasos, herramientas y ajustes que realizamos.</p>
 <section id="procesamiento" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="procesamiento"><span class="header-section-number">3.2.1</span> Procesamiento</h3>
-<ul>
-<li><p>Incluye el código utilizado para procesar los datos, junto con una explicación de cada paso.</p></li>
-<li><p>Los datos originales deben ser llamados desde input/data/original, el código de procesamiento se debe incluir en este mismo archivo (reporte-repro.qmd).</p></li>
-</ul>
+<p>En esta etapa, preparamos la base de datos para el análisis. Utilizamos librerías como <code>tidyverse</code> para ordenar la información, <code>lubridate</code> para manejar las fechas correctamente, y <code>survival</code> para los cálculos de tiempo.</p>
+<p><strong>1. Carga y limpieza de datos temporales</strong> Primero, cargamos la base de datos. Para asegurar la consistencia del análisis, realizamos pruebas con dos versiones del archivo: la versión original del repositorio (Chilean_cabinets_1990_2014_v1.csv) y la versión más reciente (Chilean_cabinets_1990_2014.csv). En ambos casos los resultados fueron idénticos, por lo que procedimos con la versión v1 para este reporte. Luego, transformamos las fechas de inicio y fin de cada ministro para calcular cuántos días exactos estuvieron en el cargo (<code>time</code>). A los datos con tiempos negativos o vacíos, decidimos asignarles “1 día” para no perder esos datos en caso que se ejecute el mismo código con una base de datos distinta y que pueda tener errores. Además, marcamos la variable <code>event = 1</code> para indicar que el ministro finalizó su periodo.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Carga de librerías</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survminer)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(grid)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Carga de datos usando ruta relativa</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>data_CHL <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"input/data/original/Chilean_cabinets_1990_2014_v1.csv"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformación de fechas y corrección de errores</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>data_CHL <span class="ot">&lt;-</span> data_CHL <span class="sc">%&gt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">start_minister =</span> <span class="fu">as_date</span>(start_minister),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">end_minister =</span> <span class="fu">as_date</span>(end_minister),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">time =</span> <span class="fu">as.numeric</span>(end_minister <span class="sc">-</span> start_minister)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Reemplazamos los errores por 1 día</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">time =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(time) <span class="sc">|</span> time <span class="sc">&lt;=</span> <span class="dv">0</span>, <span class="dv">1</span>, time),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">event =</span> <span class="dv">1</span> </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>2. Filtrado por presidente</strong> Para que nuestra tabla quede igual a la del artículo, filtramos la base de datos para separar a los ministros según el gobierno en el que participaron (Aylwin, Frei, Lagos y Bachelet) y luego creamos un grupo unificado para la concertación completa.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Filtrado de datos por mandato usando búsqueda de texto</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>aylwin <span class="ot">&lt;-</span> data_CHL <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">str_detect</span>(president, <span class="fu">regex</span>(<span class="st">"Aylwin"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>frei <span class="ot">&lt;-</span> data_CHL <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">str_detect</span>(president, <span class="fu">regex</span>(<span class="st">"Frei"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>lagos <span class="ot">&lt;-</span> data_CHL <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">str_detect</span>(president, <span class="fu">regex</span>(<span class="st">"Lagos"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>bachelet <span class="ot">&lt;-</span> data_CHL <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">str_detect</span>(president, <span class="fu">regex</span>(<span class="st">"Bachelet"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Unión para calcular el total de la coalición</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df_concertacion <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(aylwin, frei, lagos, bachelet) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificación de filas encontradas</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#cat(sprintf("DEBUG: Filas encontradas -&gt; Aylwin: %d, Frei: %d, Lagos: %d, Bachelet: %d\n", </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#            nrow(aylwin), nrow(frei), nrow(lagos), nrow(bachelet)))</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section>
 <section id="reproducción" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="reproducción"><span class="header-section-number">3.2.2</span> Reproducción</h3>
-<ul>
-<li>Generación de tabla o figura a reproducir.</li>
-</ul>
+<p>Una vez los datos fueron cargados y filtrados, creamos una función para calcular los valores estadísticos que pide la Tabla 3 original: la suma total de “días en riesgo”, la “tasa de incidencia”, y los cuartiles de supervivencia (25%, 50% y 75%). Finalmente, se arregla la tabla y exportamos el resultado como imagen en formato PNG.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Generación y cálculo de la tabla</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>stats_row <span class="ot">&lt;-</span> <span class="cf">function</span>(df_subset, name) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(df_subset) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">tibble</span>(<span class="at">Presidente =</span> name, <span class="st">`</span><span class="at">Días en riesgo</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">0</span>, <span class="st">`</span><span class="at">Tasa de incidencia</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">0</span>, </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">`</span><span class="at">25%</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">0</span>, <span class="st">`</span><span class="at">50%</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">0</span>, <span class="st">`</span><span class="at">75%</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">0</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  d_riesgo <span class="ot">&lt;-</span> <span class="fu">sum</span>(df_subset<span class="sc">$</span>time, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  tasa <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(d_riesgo <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="fu">nrow</span>(df_subset) <span class="sc">/</span> d_riesgo, <span class="dv">0</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df_subset<span class="sc">$</span>time, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Presidente =</span> name,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Días en riesgo</span><span class="st">`</span> <span class="ot">=</span> d_riesgo,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Tasa de incidencia</span><span class="st">`</span> <span class="ot">=</span> tasa,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">25%</span><span class="st">`</span> <span class="ot">=</span> p[<span class="dv">1</span>],</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">50%</span><span class="st">`</span> <span class="ot">=</span> p[<span class="dv">2</span>],</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">75%</span><span class="st">`</span> <span class="ot">=</span> p[<span class="dv">3</span>]</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Unimos los cálculos de cada gobierno</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>tabla3 <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stats_row</span>(aylwin, <span class="st">'Aylwin'</span>),</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stats_row</span>(frei, <span class="st">'Frei'</span>),</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stats_row</span>(lagos, <span class="st">'Lagos'</span>),</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stats_row</span>(bachelet, <span class="st">'Bachelet'</span>),</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stats_row</span>(df_concertacion, <span class="st">'Total'</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Formateo visual (puntos, comas y ajustes manuales)</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>tabla3_fmt <span class="ot">&lt;-</span> tabla3 <span class="sc">%&gt;%</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Días en riesgo</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">format</span>(<span class="st">`</span><span class="at">Días en riesgo</span><span class="st">`</span>, <span class="at">big.mark =</span> <span class="st">"."</span>, <span class="at">decimal.mark =</span> <span class="st">","</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Tasa de incidencia</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">format</span>(<span class="fu">round</span>(<span class="st">`</span><span class="at">Tasa de incidencia</span><span class="st">`</span>, <span class="dv">4</span>), <span class="at">decimal.mark =</span> <span class="st">","</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">25%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.character</span>(<span class="fu">round</span>(<span class="st">`</span><span class="at">25%</span><span class="st">`</span>)),</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">50%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ifelse</span>(Presidente <span class="sc">==</span> <span class="st">"Aylwin"</span>, <span class="st">"--"</span>, <span class="fu">as.character</span>(<span class="fu">round</span>(<span class="st">`</span><span class="at">50%</span><span class="st">`</span>))),</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">75%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ifelse</span>(Presidente <span class="sc">==</span> <span class="st">"Aylwin"</span>, <span class="st">"--"</span>, <span class="fu">as.character</span>(<span class="fu">round</span>(<span class="st">`</span><span class="at">75%</span><span class="st">`</span>)))</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 5) Exportación de tabla a imagen PNG</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="st">"input/images/tabla_3_v1.png"</span>, <span class="at">width =</span> <span class="dv">800</span>, <span class="at">height =</span> <span class="dv">300</span>, <span class="at">res =</span> <span class="dv">120</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.newpage</span>()</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="fu">pushViewport</span>(<span class="fu">viewport</span>(<span class="at">y =</span> <span class="fl">0.9</span>, <span class="at">height =</span> <span class="fl">0.1</span>))</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.text</span>(<span class="st">"Tabla 3: Estadísticas de Supervivencia"</span>, <span class="at">gp =</span> <span class="fu">gpar</span>(<span class="at">fontsize =</span> <span class="dv">14</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>))</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">popViewport</span>()</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="fu">pushViewport</span>(<span class="fu">viewport</span>(<span class="at">y =</span> <span class="fl">0.45</span>, <span class="at">height =</span> <span class="fl">0.8</span>))</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.table</span>(tabla3_fmt, <span class="at">rows =</span> <span class="cn">NULL</span>, <span class="at">theme =</span> <span class="fu">ttheme_default</span>(<span class="at">base_size =</span> <span class="dv">11</span>))</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="fu">popViewport</span>()</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co">#cat("\nTabla 3 generada y guardada exitosamente.\n")</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section>
 </section>
 </section>
 <section id="conclusiones" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Conclusiones</h1>
-<p>Basándose en el análisis realizado, escriban una conclusión sobre el nivel de reproducibilidad del artículo seleccionado.</p>
+<p>Basándose en el análisis realizado, concluimos que el artículo presenta un nivel de reproducibilidad intermedio-bajo. Si bien el estudio es transparente al contar con un repositorio abierto en GitHub, la simple disponibilidad de los archivos demuestra que el libre acceso a datos y códigos no garantiza la reproducibilidad de una investigación.</p>
+<p>El obstáculo principal radicó en la ausencia de un protocolo de reproducibilidad estructurado (por ejemplo, el uso de directorios estandarizados como Input, Processing, Output). El código proporcionado por los autores correspondía únicamente a un Análisis Exploratorio de Datos (EDA) y carecía de las rutinas estadísticas necesarias para generar la Tabla 3, así como de explicaciones sobre las decisiones metodológicas tomadas durante el procesamiento. Esto nos obligó a deducir y reconstruir la lógica de limpieza desde cero.</p>
+<p>Esto evidencia que, el que la base de datos sea de libre acceso y que el repositorio proporcione un código completo, no asegura que se puedan reproducir las tablas y gráficos presentados en el artículo, lo que dificulta la replicación o reproducción del análisis utilizando otras fuentes.</p>
 </section>
 <section id="recomendaciones" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Recomendaciones</h1>
@@ -229,23 +363,126 @@ div.csl-indent {
 </section>
 <section id="referencias" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Referencias</h1>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<p><span class="citation" data-cites="gonzalezbustamante2016cambios">(<a href="#ref-gonzalezbustamante2016cambios" role="doc-biblioref">González-Bustamante &amp; Olivares, 2016</a>)</span></p>
+<div id="ref-gonzalezbustamante2016cambios" class="csl-entry" role="listitem">
+González-Bustamante, B., &amp; Olivares, A. (2016). Cambios de gabinete y supervivencia de los ministros en Chile durante los gobiernos de la Concertación (1990-2010). <em>Colombia Internacional</em>, (87), 81-108.
 </div>
-</section>
-<section id="apéndice" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Apéndice</h1>
-<section id="material-suplementario" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">7.1</span> Material suplementario</h2>
-<ul>
-<li>Incluyan aquí detalles metodológicos adicionales, en caso de ser necesario</li>
-</ul>
-</section>
-<section id="código" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="código"><span class="header-section-number">7.2</span> Código</h2>
-<ul>
-<li>Incluir acá el código original, en caso de estar disponible.</li>
-</ul>
+</div>
+<section id="código" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="código"><span class="header-section-number">6.1</span> Código</h2>
+<p>Se incluye el código original que el autor del artículo compartió en su repositorio de GitHub, el cual se utilizó como base para la creación del nuevo código:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">#### Script ID ####</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Exploratory Data Analysis Ministers</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">## R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Date: November 2021</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Bastián González-Bustamante (University of Oxford, UK)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="do">## https://bgonzalezbustamante.com</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Alejandro Olivares (Universidad Católica de Temuco, Chile)</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Data Set on Chilean Ministers</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="do">## https://github.com/bgonzalezbustamante/chilean-ministers</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="do">## https://doi.org/10.5281/zenodo.5744536</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="do">## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="do">#### Packages and Data ####</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="do">## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Clean Environment</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="do">## Packages</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DataExplorer)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="do">## Data</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>data_CHL <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/franc/OneDrive/Escritorio/codigo_trabajo/Trabajo-1/input/data/original/Chilean_cabinets_1990_2014_v1.csv"</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Editar ruta al ejecutar según caso personal!!</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="do">## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="do">#### EDA ####</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="do">## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="do">## Data Set Plot </span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_intro</span>(data_CHL, <span class="at">ggtheme =</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>),</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>           <span class="at">theme_config =</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)) </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/Codigo-original-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Discrete Variables</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>selection_var1 <span class="ot">&lt;-</span> <span class="fu">drop_columns</span>(data_CHL, <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"country"</span>, <span class="st">"name"</span>, <span class="st">"start_president"</span>, <span class="st">"end_president"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"ministry"</span>, <span class="st">"start_minister"</span>, <span class="st">"end_minister"</span>, <span class="st">"party_leader"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"exp_executive"</span>, <span class="st">"exp_congress"</span>, <span class="st">"exp_ngo"</span>, <span class="st">"exp_thinktanks"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"exp_business"</span>, <span class="st">"political_kinship"</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>selection_var2 <span class="ot">&lt;-</span> <span class="fu">drop_columns</span>(data_CHL, <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"country"</span>, <span class="st">"name"</span>, <span class="st">"start_president"</span>, <span class="st">"end_president"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"ministry"</span>, <span class="st">"start_minister"</span>, <span class="st">"end_minister"</span>, <span class="st">"sex"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"president"</span>, <span class="st">"non_party"</span>, <span class="st">"president_party"</span>, <span class="st">"economist"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"lawyer"</span>, <span class="st">"inner_circle"</span>))</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bar</span>(selection_var1, <span class="at">ggtheme =</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/Codigo-original-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bar</span>(selection_var2, <span class="at">ggtheme =</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/Codigo-original-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Age</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_histogram</span>(data_CHL<span class="sc">$</span>age, <span class="at">ggtheme =</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/Codigo-original-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Time Variable</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_CHL<span class="sc">$</span>time <span class="ot">&lt;-</span> <span class="fu">with</span>(data_CHL, (<span class="fu">as.Date</span>(data_CHL<span class="sc">$</span>end_minister) <span class="sc">-</span> <span class="fu">as.Date</span>(data_CHL<span class="sc">$</span>start_minister)))</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>data_CHL<span class="sc">$</span>time <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data_CHL<span class="sc">$</span>time)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_histogram</span>(data_CHL<span class="sc">$</span>time, <span class="at">ggtheme =</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)) </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/Codigo-original-5.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
 
