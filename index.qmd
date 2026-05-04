@@ -68,13 +68,23 @@ Se seleccionó este artículo ya que en primer lugar, cumplía con el requisito 
 
 # Evaluación de reproducibilidad
 
-  -   **Disponibilidad de datos**: Sí, el artículo entrega acceso a los datos utilizados en el estudio mediante un repositorio en GitHub, en este se encuentra la base de datos utilizada en la investigación, los códigos, imágenes de gráficos resultantes del análisis, referencias, entre otros documentos.
-  -   **Disponibilidad de código**: El artículo entrega un repositorio de GitHub con los códigos utilizados en R; sin embargo, las tablas y gráficos presentados en el informe no corresponden con las que se realizan mediante los códigos, ya que estos fueron siendo actualizados pero estos cambios no fueron reportados explícitamente en el código.
-  -   **Documentación**: El artículo menciona que se aplicó un análisis de supervivencia, específicamente modelos de riesgos proporcionales y regresiones de Cox con fragilidad compartida. Además, se señala que el conjunto de datos utilizados se construyó con fuentes de acceso público, se describe la operacionalización de variables como características individuales o variables institucionales.
+  **Disponibilidad de datos**: 
+  
+  Sí, el artículo entrega acceso a los datos utilizados en el estudio mediante un repositorio en GitHub, en este se encuentra la base de datos utilizada en la investigación, los códigos, imágenes de gráficos resultantes del análisis, referencias, entre otros documentos.
+
+  **Disponibilidad de código**: 
+  
+  El artículo entrega un repositorio de GitHub con los códigos utilizados en R; sin embargo, las tablas y gráficos presentados en el informe no corresponden con las que se realizan mediante los códigos, ya que estos fueron siendo actualizados pero estos cambios no fueron reportados explícitamente en el código.
+  
+  **Documentación**: 
+  
+  El artículo menciona que se aplicó un análisis de supervivencia, específicamente modelos de riesgos proporcionales y regresiones de Cox con fragilidad compartida. Además, se señala que el conjunto de datos utilizados se construyó con fuentes de acceso público, se describe la operacionalización de variables como características individuales o variables institucionales.
 
 De este modo, el artículo presenta una metodología relativamente clara debido a que explica las técnicas utilizadas así como la construcción de datos. Sin embargo, si bien el informe es claro para su comprensión, su réplica no sería directa ya que los datos provienen de fuentes distintas y deben ser reconstruidos por el investigador interesado.
 
-  -   **Transparencia**:  El artículo seleccionado entrega información importante acerca de la transparencia de la investigación. En primer lugar, es posible destacar que se presenta un resumen detallado de las labores de los investigadores a cargo, lo que entrega transparencia sobre posibles sesgos por los que el estudio podría ser influenciado. En ese sentido, ambos investigadores se desempeñan como docentes en distintas casas de estudios, descartando su pertenencia a organizaciones por las cuales se genere algún tipo de conflicto de interés, ya sea por temas ideológicos, de restricciones, etc. (como por ejemplo con la pertenencia a algún partido político). 
+  **Transparencia**:  
+  
+  El artículo seleccionado entrega información importante acerca de la transparencia de la investigación. En primer lugar, es posible destacar que se presenta un resumen detallado de las labores de los investigadores a cargo, lo que entrega transparencia sobre posibles sesgos por los que el estudio podría ser influenciado. En ese sentido, ambos investigadores se desempeñan como docentes en distintas casas de estudios, descartando su pertenencia a organizaciones por las cuales se genere algún tipo de conflicto de interés, ya sea por temas ideológicos, de restricciones, etc. (como por ejemplo con la pertenencia a algún partido político). 
 
 En segundo lugar, se especifica que esta investigación se enmarca en el contexto del VIII Congreso Latinoamericano de Ciencia Política organizado por la Asociación Latinoamericana de Ciencia Política (ALACIP). En paralelo, se aclara que el financiamiento de esta investigación proviene del proyecto Fondecyt #1140564 (Sergio Toro, investigador principal).
 
