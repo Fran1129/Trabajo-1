@@ -77,7 +77,7 @@ div.csl-indent {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Reporte de Reproducibilidad</h1>
-            <p class="subtitle lead">Artículo: [título del artículo a reproducir] <br><a href="https://github.com/data-soc/template-repro" target="_blank"><i class="bi bi-github"></i></a></p>
+            <p class="subtitle lead">Artículo: [Cambios de gabinete y supervivencia de los ministros en Chile durante los gobiernos de la Concertación (1990-2010)] <br><a href="https://github.com/data-soc/template-repro" target="_blank"><i class="bi bi-github"></i></a></p>
                       </div>
   </div>
     
@@ -86,7 +86,7 @@ div.csl-indent {
     <div class="quarto-title-meta-heading">Afiliación</div>
     
       <div class="quarto-title-meta-contents">
-      <p class="author">Violeta Mansilla <a href="mailto:mail@mail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+      <p class="author">Violeta Mansilla <a href="mailto:violeta.mansilla@ug.uchile.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
     </div>
     <div class="quarto-title-meta-contents">
           <p class="affiliation">
@@ -94,7 +94,7 @@ div.csl-indent {
             </p>
         </div>
       <div class="quarto-title-meta-contents">
-      <p class="author">Francisca Osorio <a href="mailto:mail@mail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+      <p class="author">Francisca Osorio <a href="mailto:francisca.osorio.h@ug.uchile.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
     </div>
     <div class="quarto-title-meta-contents">
           <p class="affiliation">
@@ -102,7 +102,7 @@ div.csl-indent {
             </p>
         </div>
       <div class="quarto-title-meta-contents">
-      <p class="author">Martina Soto <a href="mailto:mail@mail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+      <p class="author">Martina Soto <a href="mailto:martina.soto@ug.uchile.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
     </div>
     <div class="quarto-title-meta-contents">
           <p class="affiliation">
@@ -117,7 +117,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">25 de abril de 2026</p>
+        <p class="date">3 de mayo de 2026</p>
       </div>
     </div>
     
@@ -157,29 +157,46 @@ div.csl-indent {
 
 <section id="selección-de-artículoreporte" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Selección de artículo/reporte</h1>
-<ul>
-<li>Referencia del artículo seleccionado</li>
-<li>Breve resumen del artículo seleccionado</li>
-<li>Justificación de la selección del artículo</li>
-</ul>
+<p>González-Bustamante, B., &amp; Olivares, A. (2016). Cambios de gabinete y supervivencia de los ministros en Chile durante los gobiernos de la Concertación (1990-2010). Colombia internacional, (87), 81-108.</p>
+<p>El informe seleccionado analiza los factores que influyen en la permanencia o rotación de ministros de los gobiernos de la Concertación en Chile (1990- 2010). Mediante un análisis de supervivencia, utilizando modelos de Cox, se evalúa el impacto de características individuales, factores institucionales y eventos críticos. Los resultados muestran que variables como el partido político, la profesión y eventos como crisis económicas o escándalos de corrupción inciden en la rotación ministerial.</p>
+<p>Se seleccionó este artículo ya que en primer lugar, cumplía con el requisito de pertenecer al área de las ciencias sociales. Para su elección, se realizó un proceso de filtrado entre diferentes investigaciones y se escogió este debido a que cuenta con código abierto disponible, lo que facilita evaluar si permite o no su reproducibilidad.</p>
 </section>
 <section id="evaluación-de-reproducibilidad" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Evaluación de reproducibilidad</h1>
-<p>Análisis detallado del artículo seleccionado, evaluando los siguientes aspectos:</p>
 <ul>
-<li><strong>Disponibilidad de datos</strong>: ¿El artículo proporciona acceso a los datos utilizados en el estudio? Si no es así, ¿qué dificultades se enfrentaron para obtener los datos?</li>
-<li><strong>Disponibilidad de código</strong>: ¿El artículo proporciona acceso al código utilizado para el análisis? Si es así, ¿cómo se puede acceder?</li>
-<li><strong>Documentación</strong>: ¿El artículo incluye una descripción clara de los métodos y procedimientos utilizados en el estudio? ¿Es suficiente para que otro investigador pueda replicar el estudio?</li>
-<li><strong>Transparencia</strong>: ¿El artículo proporciona información sobre los posibles conflictos de interés, financiamiento, y otros aspectos relacionados con la transparencia de la investigación?</li>
+<li><strong>Disponibilidad de datos</strong>: Sí, el artículo entrega acceso a los datos utilizados en el estudio mediante un repositorio en GitHub, en este se encuentra la base de datos utilizada en la investigación, los códigos, imágenes de gráficos resultantes del análisis, referencias, entre otros documentos.</li>
+<li><strong>Disponibilidad de código</strong>: El artículo entrega un repositorio de GitHub con los códigos utilizados en R; sin embargo, las tablas y gráficos presentados en el informe no corresponden con las que se realizan mediante los códigos, ya que estos fueron siendo actualizados pero estos cambios no fueron reportados explícitamente en el código.</li>
+<li><strong>Documentación</strong>: El artículo menciona que se aplicó un análisis de supervivencia, específicamente modelos de riesgos proporcionales y regresiones de Cox con fragilidad compartida. Además, se señala que el conjunto de datos utilizados se construyó con fuentes de acceso público, se describe la operacionalización de variables como características individuales o variables institucionales.</li>
 </ul>
+<p>De este modo, el artículo presenta una metodología relativamente clara debido a que explica las técnicas utilizadas así como la construcción de datos. Sin embargo, si bien el informe es claro para su comprensión, su réplica no sería directa ya que los datos provienen de fuentes distintas y deben ser reconstruidos por el investigador interesado.</p>
+<ul>
+<li><strong>Transparencia</strong>: El artículo seleccionado entrega información importante acerca de la transparencia de la investigación. En primer lugar, es posible destacar que se presenta un resumen detallado de las labores de los investigadores a cargo, lo que entrega transparencia sobre posibles sesgos por los que el estudio podría ser influenciado. En ese sentido, ambos investigadores se desempeñan como docentes en distintas casas de estudios, descartando su pertenencia a organizaciones por las cuales se genere algún tipo de conflicto de interés, ya sea por temas ideológicos, de restricciones, etc. (como por ejemplo con la pertenencia a algún partido político).</li>
+</ul>
+<p>En segundo lugar, se especifica que esta investigación se enmarca en el contexto del VIII Congreso Latinoamericano de Ciencia Política organizado por la Asociación Latinoamericana de Ciencia Política (ALACIP). En paralelo, se aclara que el financiamiento de esta investigación proviene del proyecto Fondecyt #1140564 (Sergio Toro, investigador principal).</p>
+<p>En tercer lugar, el artículo señala los detalles pertinentes a la transparencia de los datos, especificando temas como los métodos utilizados, las variables consideradas, así como temas referentes a la precisión y el origen de los datos.</p>
+<p>En base a lo anterior es posible señalar que el artículo cuenta con grandes consideraciones en términos de transparencia, contando incluso con un repositorio externo en GitHub, el cual entrega información acerca de los códigos y métodos utilizados, y detalla a su vez, algunos cambios realizados en el artículo a partir de sugerencias de evaluadores anónimos.</p>
 </section>
 <section id="análisis-reproducible" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Análisis reproducible</h1>
-<p>Seleccionar un resultado específico del artículo (por ejemplo, una tabla de resultados o una figura) y tratar de reproducirlo utilizando los datos y el código proporcionados. Documentar el proceso de reproducción, incluyendo cualquier dificultad encontrada y cómo se resolvió.</p>
+<p>La tabla seleccionada para el ejercicio de reproducibilidad corresponde a la Tabla 3, la que entrega información sobre los días en riesgo, la tasa de incidencia y rotación de los ministros de la Concertación.</p>
+<p>Para iniciar el proceso de reproducibilidad, se utilizó el código de R que está disponible en el repositorio externo de GitHub del autor; sin embargo, al ejecutarse dicho código el Script no daba como resultado las tablas y gráficos presentados en el artículo, solo entregaba información sobre la base de datos utilizada, los paquetes, las variables seleccionadas y un análisis exploratorio de dichos datos.</p>
+<p>Para poder continuar con el ejercicio de reproducibilidad, se realizó un nuevo Script, utilizando la base de datos disponible en el repositorio de GitHub del autor; se instalaron los paquetes, se seleccionaron las variables a utilizar y se filtraron los datos. Una vez realizada la limpieza de datos, se procedió a generar la tabla 3 por medio del Script de R, exportando la tabla al formato PNG para así facilitar su visualización.</p>
+<p>El proceso realizado no fue complejo, ya que requería de una limpieza de datos y la ejecución de una tabla, proceso relativamente sencillo. Sin embargo, al visualizar tanto la tabla ejecutada en el nuevo Script, como la tabla original presentada en el artículo, fue posible evidenciar una discrepancia en los datos que cada tabla presentaba. Por ello, se realizó una exhaustiva búsqueda de la base de datos original, para poder dar cuenta de si se realizó alguna modificación de ella, pero dentro del repositorio de GitHub no fue posible hallarla, por lo que fue posible identificar otra complicación en el ejercicio de reproducibilidad. En paralelo, se realizó una búsqueda en Zenodo a traves del link ofrecido por el autor, ahí se buscaron todas las versiones del Dataset, y tras ejecutar el código con la base de datos más antigua, publicada en 2021, los resultados continuaron siendo los mismos que los anteriores y difieren de la tabla 3 presentada en el artículo.</p>
+<p>Al respecto, si bien el autor señala en su repositorio de GitHub una serie de actualizaciones, incluida la base de datos, este no detalla cuáles fueron dichas actualizaciones ni tampoco pública la base de datos original, ya que el repositorio se creó en 2021 y el artículo se publicó en 2016, evidenciando una vez más complicaciones en el ejercicio de reproducibilidad de la información.</p>
+<p>En base a lo anterior, es posible dar cuenta de que pese a que el autor del artículo cuenta con un repositorio de GitHub en donde se presenta un código disponible, esto no posibilita un correcto ejercicio de la reproducibilidad de la información.</p>
 <section id="resultado-a-reproducir" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="resultado-a-reproducir"><span class="header-section-number">3.1</span> Resultado a reproducir</h2>
 <ul>
-<li>Imagen de tabla(s), figura(s) o resultado específico del artículo seleccionado, junto a una breve descripción.</li>
+<li>A continuación se presenta la tabla seleccionada para el ejercicio de reproducibilidad:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="input/images/tabla_original.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Tabla 3 original: Estadísticas de supervivencia reportadas en el artículo de González-Bustamante y Olivares (2016).</figcaption>
+</figure>
+</div>
+<ul>
+<li>La tabla seleccionada da cuenta de las estadisticas de supervivencia de los ministros en cada gobierno de la Concertación, entregando información acerca de los días en riesgo, la tasa de incidencia y la tasa de supervivencia de los ministros.</li>
 </ul>
 </section>
 <section id="proceso-de-reproducción" class="level2" data-number="3.2">

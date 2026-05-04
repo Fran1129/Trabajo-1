@@ -1,3 +1,74 @@
+###################################################################
+# Código disponible en el repositorio original de los autores en github:
+## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#### Script ID ####
+
+## Exploratory Data Analysis Ministers
+## R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
+## Date: November 2021
+
+## Bastián González-Bustamante (University of Oxford, UK)
+## https://bgonzalezbustamante.com
+## Alejandro Olivares (Universidad Católica de Temuco, Chile)
+
+## Data Set on Chilean Ministers
+## https://github.com/bgonzalezbustamante/chilean-ministers
+## https://doi.org/10.5281/zenodo.5744536
+
+## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#### Packages and Data ####
+
+## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Clean Environment
+rm(list = ls())
+
+## Packages
+library(DataExplorer)
+library(ggplot2)
+
+
+## Data
+data_CHL <- read.csv("C:/Users/franc/OneDrive/Escritorio/codigo_trabajo/Trabajo-1/input/data/original/Chilean_cabinets_1990_2014_v1.csv")
+# Editar ruta al ejecutar según caso personal!!
+
+
+## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#### EDA ####
+
+## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Data Set Plot 
+plot_intro(data_CHL, ggtheme = theme_minimal(base_size = 12),
+           theme_config = theme(legend.position = "none")) 
+
+## Discrete Variables
+selection_var1 <- drop_columns(data_CHL, c("id", "country", "name", "start_president", "end_president",
+                                           "ministry", "start_minister", "end_minister", "party_leader",
+                                           "exp_executive", "exp_congress", "exp_ngo", "exp_thinktanks",
+                                           "exp_business", "political_kinship"))
+selection_var2 <- drop_columns(data_CHL, c("id", "country", "name", "start_president", "end_president",
+                                           "ministry", "start_minister", "end_minister", "sex",
+                                           "president", "non_party", "president_party", "economist",
+                                           "lawyer", "inner_circle"))
+plot_bar(selection_var1, ggtheme = theme_minimal(base_size = 12))
+plot_bar(selection_var2, ggtheme = theme_minimal(base_size = 12))
+
+## Age
+plot_histogram(data_CHL$age, ggtheme = theme_minimal(base_size = 12))
+
+## Time Variable
+data_CHL$time <- with(data_CHL, (as.Date(data_CHL$end_minister) - as.Date(data_CHL$start_minister)))
+data_CHL$time <- as.numeric(data_CHL$time)
+plot_histogram(data_CHL$time, ggtheme = theme_minimal(base_size = 12)) 
+
+
+#####################################################
+# Codigo realizado por nosotros a continuación:
+
 # 1) carga librerias
 library(tidyverse)
 library(lubridate)
@@ -7,7 +78,9 @@ library(gridExtra)
 library(grid)
 
 # 2) carga datos
-data_CHL <- read_csv("C:/Users/franc/OneDrive/Escritorio/codigo_trabajo/Trabajo-1/input/data/original/Chilean_cabinets_1990_2014.csv")
+data_CHL <- read.csv("C:/Users/franc/OneDrive/Escritorio/codigo_trabajo/Trabajo-1/input/data/original/Chilean_cabinets_1990_2014_v1.csv")
+# Editar ruta al ejecutar según caso personal!!
+
 
 data_CHL <- data_CHL %>%
   mutate(
@@ -25,6 +98,8 @@ aylwin <- data_CHL %>% filter(str_detect(president, regex("Aylwin", ignore_case 
 frei <- data_CHL %>% filter(str_detect(president, regex("Frei", ignore_case = TRUE)))
 lagos <- data_CHL %>% filter(str_detect(president, regex("Lagos", ignore_case = TRUE)))
 bachelet <- data_CHL %>% filter(str_detect(president, regex("Bachelet", ignore_case = TRUE)))
+
+
 
 df_concertacion <- bind_rows(aylwin, frei, lagos, bachelet) %>% distinct()
 
@@ -70,7 +145,7 @@ tabla3_fmt <- tabla3 %>%
   )
 
 # 5) exportacion de tabla a png
-png("C:/Users/franc/OneDrive/Escritorio/codigo_trabajo/Trabajo-1/input/images/tabla_3.png", width = 800, height = 300, res = 120)
+png("C:/Users/franc/OneDrive/Escritorio/codigo_trabajo/Trabajo-1/input/images/tabla_3_v1.png", width = 800, height = 300, res = 120)
 grid.newpage()
 
 pushViewport(viewport(y = 0.9, height = 0.1))
@@ -83,4 +158,4 @@ popViewport()
 
 dev.off()
 
-cat("\nTabla 3 generada y guardada como 'tabla_3.png'\n")
+cat("\nTabla 3 generada y guardada como 'tabla_3_v1.png'\n")
