@@ -17,14 +17,19 @@ Trabajo-1/
  |  |- settings.json
  |- README.md
  |- index.html
- |- index.pdf
  |- index.qmd
  |- input/
  |  |- bib/
+ |  |  |- apa6.csl
+ |  |  |- cita.bib
  |  |- data/
  |  |  |- original/
+ |  |  |  |- Chilean_cabinets_1990_2014.csv
+ |  |  |  |- Chilean_cabinets_1990_2014_v1.csv
  |  |  |- proc/
  |  |- images/
+ |  |  |- tabla_3_v1.png
+ |  |  |- tabla_original.png
  |  |- original-code/
  |- libs/
  |  |- ocs.scss
@@ -32,7 +37,9 @@ Trabajo-1/
  |  |- graphs/
  |  |- tables/
  |- processing/
+ |  |- CodigoOriginal.R
  |  |- README-prod.md
+ |  |- ReproduccionTabla.R
  |  |- prod_analysis.Rmd
  |  |- prod_analysis.html
  |  |- prod_prep.Rmd
