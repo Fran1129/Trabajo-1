@@ -51,4 +51,7 @@ Trabajo-1/
 
 Este working tree incorpora las carpetas y archivos principales relevantes del repo (omite algunas) y se actualiza automáticamente al hacer commit mediante una github action que se encuentra definida en el archivo `.github/workflows/update-working-tree.yml`. El propósito de esta acción es mantener un registro actualizado de la estructura del proyecto, lo que facilita la navegación y organización de los archivos para los estudiantes.
 
+## Sitio publicado
 
+Puedes ver el reporte interactivo y finalizado en el siguiente enlace:
+[Sitio publicado](https://fran1129.github.io/Trabajo-1/)
